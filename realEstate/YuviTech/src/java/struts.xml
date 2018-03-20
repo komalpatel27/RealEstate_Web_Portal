@@ -1,0 +1,228 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <package name="default" extends="struts-default">
+      <action name="ARCP" class="admin.AddUpdatePropertyLogic">
+          <result name="RESIDENTIAL">/AddPropertyInformation.jsp</result>
+          <result name="COMMERCIAL">/ACP.jsp</result>
+          <result name="input">/ARCP.jsp</result>
+           <result name="RELOGIN">/Login.jsp</result>
+      </action>
+    <action name="OP"  class="admin.AddUpdatePropertyLogic">
+          <result name="INSERT">/index.jsp</result>       
+          <result name="input">/index.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+    </action>   
+    <action name="APC"  class="admin.AddUpdatePropertyLogic">
+          <result name="INSERT">/RPF.jsp</result>              
+          <result name="DESIGN">/AddPropertyInformation.jsp</result>
+          <result name="input">/AddPropertyInformation.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+    </action>
+    <action name="APCC"  class="admin.AddUpdatePropertyLogic">
+          <result name="INSERT">/CPF.jsp</result>       
+          <result name="DESIGN">/ACP.jsp</result>
+          <result name="input">/ACP.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+    </action>
+    <action name="UpdatePropertyAction"  class="admin.AddUpdatePropertyLogic">
+          <result name="UPDATE">/ARCP.jsp</result>          
+          <result name="DESIGN">/UpdatePropertyInformation.jsp</result>
+          <result name="VIEW">/UpdatePropertyInformation.jsp</result>
+           <result name="RELOGIN">/Login.jsp</result>
+    </action>
+    <action name="DeletePropertyAction"  class="admin.AddUpdatePropertyLogic">
+          <result name="DELETE">/Wel.jsp</result>          
+          <result name="DESIGN">/DeletePropertyInformation.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+    </action>
+    <action name="CPF"  class="admin.AddUpdatePropertyLogic">
+          <result name="INSERT">/ARCP.jsp</result>          
+          <result name="DESIGN">/CPF.jsp</result>
+          <result name="input">/CPF.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     <action name="RPF"  class="admin.AddUpdatePropertyLogic">
+          <result name="INSERT">/ARCP.jsp</result>          
+          <result name="DESIGN">/RPF.jsp</result>  
+          <result name="input">/RPF.jsp</result>  
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     <action name="DelCommProp"  class="admin.AddUpdatePropertyLogic">
+          <result name="DELETE">/ViewComm.jsp</result>          
+          <result name="DESIGN">/ViewComm.jsp</result> 
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     <action name="DelProp"  class="admin.AddUpdatePropertyLogic">
+          <result name="DELETE">/ViewRes.jsp</result>          
+          <result name="DESIGN">/ViewRes.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     
+     <action name="URPF"  class="admin.AddUpdatePropertyLogic">
+          <result name="UPDATE">/URPF.jsp</result>          
+          <result name="DESIGN">/URPF.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     <action name="UCPF"  class="admin.AddUpdatePropertyLogic">
+          <result name="UPDATE">/UCPF.jsp</result>          
+          <result name="DESIGN">/UCPF.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+
+     <action name="AddStu"  class="pac.SAction">
+          <result name="SUCCESS">/Wel.jsp</result>
+          <result name="DESIGN">/Client.jsp</result>
+           <result name="input">/Client.jsp</result>
+           <result name="RELOGIN">/Login.jsp</result>
+          </action>
+    <action name="Emp"  class="pac.SAction">
+          <result name="SUCCESS">/Empdetails.jsp</result>
+          <result name="DESIGN">/Empdetails.jsp</result>
+          <result name="input">/Empdetails.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+    </action>
+       
+    <action name="Validate"  class="pac.SAction">
+          <result name="SUCCESS">/Login.jsp</result>
+          <result name="DESIGN">/Wel.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+          <result name="Failure">/Wel.jsp</result>
+    </action>
+       <action name="PChange"  class="pac.SAction">
+          <result name="VALIDATE">/changepass1.jsp</result>
+          <result name="DESIGN">/changepass1.jsp</result>
+          <result name="SUCCESS">/changepass1.jsp</result>
+         
+          <result name="input">/changepass1.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+       </action>
+      <action name="FPass"  class="pac.SAction">
+          <result name="VALIDATE">/Fpass1.jsp</result>
+          <result name="DESIGN">/Fpass.jsp</result>
+          <result name="SUCCESS">/Fpass1.jsp</result>
+           <result name="FAILURE">/Fpass1.jsp</result>
+           <result name="RELOGIN">/Login.jsp</result>
+      </action>
+      <action name="SUpdate"  class="pac.SAction2">
+          <result name="DESIGN">/Update.jsp</result>
+          <result name="SUCCESS">/Regis.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+      </action>
+      <action name="PUpdate"  class="pac.SAction3">
+          <result name="DESIGN">/Pupdate.jsp</result>
+          <result name="SUCCESS">/Regis.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+      </action>
+      <action name="Login"  class="pac.SAction">
+          <result name="SUCCESS">/Regis1.jsp</result>
+          <result name="DESIGN">/Login.jsp</result>
+          <result name="FAILURE">/Wel.jsp</result>
+          <result name="SECURITY">/Login.jsp</result>
+          <result name="ADMIN">/Admin.jsp</result>
+          <result name="CUSTOMER">/Regis1.jsp</result>
+          <result name="BUILDER">/builder.jsp</result>
+          <result name="DEALER">/builder.jsp</result>
+          <result name="input">/Login.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+      </action>
+     <action name="Feedback"  class="feedback.Feedback">
+          <result name="SUCCESS">/feedBack.jsp</result>
+          <result name="DESIGN">/feedBack.jsp</result>
+          <result name="FAILURE">/feedBack.jsp</result>
+          <result name="input">/feedBack.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+     </action>
+     
+     <action name="Comp"  class="feedback.Complain">
+          <result name="SUCCESS">/complaint.jsp</result>
+          <result name="DESIGN">/complaint.jsp</result> 
+          <result name="input">/complaint.jsp</result> 
+          <result name="RELOGIN">/Login.jsp</result>
+      </action>
+      <action name="ViewComp"  class="feedback.Complain">
+          <result name="SUCCESS">/viewcomplaint.jsp</result>
+          <result name="DESIGN">/viewcomplaint.jsp</result>
+      </action>
+      <action name="DelEmp" class="pac.ViewEmp">
+             <result name="DelEmp">/DelEmp.jsp</result>
+              <result name="DESIGN">/DelEmp.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+       </action>
+       <action name="DelCust" class="pac.ViewEmp">
+             <result name="DelEmp">/ViewCustomer.jsp</result>
+             <result name="DESIGN">/ViewCustomer.jsp</result>
+             <result name="RELOGIN">/Login.jsp</result>
+       </action>
+       <action name="DelBuilder" class="pac.ViewEmp">
+             <result name="DelEmp">/ViewBuilder.jsp</result>
+              <result name="DESIGN">/ViewBuilder.jsp</result>
+             <result name="RELOGIN">/Login.jsp</result>
+       </action>
+         <action name="offer" class="offer_scheme.OAction">
+            <result name="SUCCESS">/Offer_scheme.jsp</result>
+            <result name="DESIGN">/Offer_scheme.jsp</result>
+            <result name="input">/Offer_scheme.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="del" class="offer_scheme.OAction">
+            <result name="DELETE">/Del.jsp</result>
+            <result name="DESIGN">/Del.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="update" class="offer_scheme.OAction">
+            <result name="DESIGN">/Update_1.jsp</result>
+            <result name="VIEW">/Update_1.jsp</result>
+            <result name="SUCCESS">/Update_1.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="DelOffer" class="offer_scheme.OAction">
+            <result name="DELOFFER">/ViewOfferScheme.jsp</result>
+            <result name="DESIGN">/ViewOfferScheme.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="view" class="offer_scheme.OAction">
+            <result name="DESIGN">/View.jsp</result>
+            <result name="VIEW">/Wel1_1.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="company" class="company.CAction">
+            <result name="design">/company.jsp</result>
+            <result name="success">/Wel1.jsp</result>
+            <result name="input">/company.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        <action name="view1" class="company.CAction">
+           <result name="design">/ViewCompany.jsp</result>
+           <result name="view">/ViewCompany.jsp</result>
+           <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        
+        <action name="delete1" class="company.CAction">
+            <result name="design">/ViewCompany.jsp</result>
+            <result name="del">/ViewCompany.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>        
+        <action name="update1" class="company.CAction">
+            <result name="design">/UpdateCompany.jsp</result>
+            <result name="update">/UpdateCompany.jsp</result>
+            <result name="RELOGIN">/Login.jsp</result>
+        </action>
+        
+       <action name="Search"  class="search.Search">
+          <result name="SUCCESS">/viewsearch3.jsp</result>
+          <result name="Failure">/Search.jsp</result>
+          <result name="DESIGN">/Search.jsp</result>
+          <result name="input">/Search.jsp</result>
+       </action>
+       <action name="sendquotation"  class="postRequirment.PostRequirment">
+          <result name="SUCCESS">/postRequirment.jsp</result>          
+          <result name="DESIGN">/postRequirment.jsp</result>
+          <result name="input">/postRequirment.jsp</result>
+          <result name="RELOGIN">/Login.jsp</result>
+        </action>
+       
+       </package>
+</struts>
